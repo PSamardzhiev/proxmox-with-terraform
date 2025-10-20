@@ -14,3 +14,6 @@ Reference URL for detailed provider information:
 ```html
 https://registry.terraform.io/providers/bpg/proxmox/latest/docs/resources/virtual_environment_container
 ```
+Notes:\
+The created container will have a default username: ```root```\
+The password can be viewed by using the command ```terraform output -raw ubuntu_container_password```
