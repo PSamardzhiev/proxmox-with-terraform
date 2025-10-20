@@ -64,3 +64,21 @@ variable "datastore_id" {
   type = string
   default = "local-lvm"
 }
+variable "cnt_dns_config" {
+  type = list(string)
+  default = [
+    "192.168.1.3",
+    "1.1.1.1"
+  ]
+}
+
+variable "cnt_lookup_domain_config" {
+  type = string
+  default = "pve.vlab.local"
+  
+}
+
+variable "pve_bridge_name" {
+  type = string
+  default = "eth0"
+}

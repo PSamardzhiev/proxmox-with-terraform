@@ -1,5 +1,5 @@
 resource "proxmox_virtual_environment_container" "ubuntu_container" {
-  description  = "Managed by Terraform"
+  description  = "LXC Container Managed by Terraform"
   node_name    = var.pm_datacenter_node
   vm_id        = var.pm_cnt_id
   unprivileged = var.cnt_root_flag
@@ -17,16 +17,12 @@ resource "proxmox_virtual_environment_container" "ubuntu_container" {
       password = random_password.ubuntu_container_password.result
     }
     dns {
-      domain = "vlab.local"
-      # List of strings below, where you can configure container DNS servers
-      servers = [
-        "192.168.1.3",
-        "1.1.1.1"
-      ]
+      domain = var.cnt_lookup_domain_config
+      servers = var.cnt_dns_config
     }
   }
   network_interface {
-    name    = "eth0"
+    name    = var.pve_bridge_name
     enabled = true
   }
 
