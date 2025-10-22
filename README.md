@@ -1,4 +1,4 @@
-# Proxmox LXC with Terraform
+# Proxmox LXC Container provisioning with Terraform
 
 A small Terraform configuration to provision an Ubuntu LXC container on Proxmox VE.
 
@@ -107,5 +107,7 @@ pm_api_secret      = "REPLACE_WITH_SECRET"
 - Add cloud-init userdata or provisioners if you need post-boot configuration.
 - Use modules for multiple containers or to parameterize networking/storage policies.
 
-## License
+# Proxmox LXC Virtual Machine with Terraform
+
+# License
 See LICENSE in the repository.
