@@ -67,7 +67,7 @@ variable "datastore_id" {
 variable "cnt_dns_config" {
   type = list(string)
   default = [
-    "192.168.1.3",
+    "192.168.1.4",
     "1.1.1.1"
   ]
 }
